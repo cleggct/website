@@ -1,0 +1,155 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Christa's Webzone</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                font-family: Garamond, serif;
+            }
+
+            /* Style the header */
+            .header {
+		margin-bottom: 20px; /* some margins */
+                padding: 80px; /* some padding */
+                text-align: left; /* align to the left */
+                background: black; /* black background */
+                color: white; /* white text color */
+            }
+
+            /* Increase the font size of the <h1> element */
+            .header h1 {
+                font-size: 2.0em;
+                transform: scale(1, 1.5);
+            }
+
+            /* Column container */
+	    .row {
+		display: flex;
+		flex-wrap: nowrap;
+                margin-bottom: 10px; /* put a margin at the bottom */
+	    }
+
+	    /* Navbar style stuff */
+
+            .navbar {
+                flex: 20%; /* take up twenty percent of the space */
+		margin-right: 20px;
+	    }
+
+	    .navbar ul {
+		width: 20%; /* tell the list to take up twenty percent */
+	        list-style-type: none; /* no bullets in our list */
+                margin: 0; /* no margins */
+                padding: 0; /* no padding */
+                background-color: black; /* black background */
+		position: absolute; /* keep it fixed while we scroll */
+		height: 100%; /* make it run the entire height of the page */
+		overflow: auto; /* deal with floating elements */
+
+            }
+
+	    /* Default style of the navbar boxes */
+            .navbar li a {
+                display: block; /* give the links block containers */
+                color: white; /* white text */
+                padding: 8px 16px; /* add some padding */
+                text-decoration: none;
+            }
+
+            /* Change the link color on hover */
+            .navbar li a:hover {
+                background-color: white; /* set the background to white */
+                color: black; /* set the text color to black */
+            }
+
+	    /* Lets also make the active box white with black text */
+	    .navbar li a.active {
+		background-color: white;
+		color: black;
+	    }
+
+	    /* Main column style */
+	    .main {
+		flex: 80%;
+		background-color: white;
+            }
+
+	    /* Selfie style */
+	    .main img {
+		width: 300px;
+		height: 570px;
+		float: left;
+		margin-right: 10px;
+		object-fit: contain;
+	    }
+
+	    ul {
+                list-style-type: none;
+	    }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="header">
+		<h1 id="cc">CC Stands For Christa Clegg</h1>
+        </div>
+
+        <script>
+            const adjectives = [
+				    "Crystalline"
+				    ,"Cerulean"
+				    ,"Crushed"
+				    ,"Cavalier"
+				    ,"Colossal"
+				    ,"Cryptic"
+				    ,"Cumulative"
+				    ,"Considerable"
+				    ,"Charming"
+				    ,"Celestial"
+			    ];
+            const nouns = [
+				    "Chrysanthemum"
+				    ,"Cardinal"
+				    ,"Chronicle"
+				    ,"Collection"
+				    ,"Celestine"
+				    ,"Crystal"
+				    ,"Coral"
+				    ,"Chrysalis"
+				    ,"Chimera"
+				    ,"Coda"
+			    ];
+	    let pickRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+            const baseString = "CC Stands For ";
+
+            setInterval(() => this.document.getElementById("cc").innerHTML = baseString+"<i>"+pickRandom(adjectives)+" "+pickRandom(nouns)+"</i>", 1200);
+        </script>
+
+        <div class="row">
+	    <div class="navbar">
+                <ul>
+	            <li><a href="about.html">About</a></li>
+	            <li><a href="contents.html">Contents</a></li>
+	            <li><a class="active" href="links.html">Links</a></li>
+                </ul>
+	    </div>
+
+	    <div class="main">
+                <h2>Links</h2>
+		<p>Here are some useful links to learn more about me:</p>
+		<ul>
+		    <li><a href="https://github.com/cleggct">My Github</a></li>
+		    <li><a href="https://www.linkedin.com/in/chris-clegg-6b4a41235/">My LinkedIn</a></li>
+		</ul>
+		<p>Get in touch:</p>
+		<ul>
+		    <li><a href="mailto:cleggct@gmail.com">cleggct@gmail.com</a></li>
+		</ul>
+	    </div>
+        </div>
+    </body>
+</html> 
